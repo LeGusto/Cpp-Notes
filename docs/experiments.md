@@ -95,7 +95,7 @@ std::reduce(std::execution::par_unseq, nums.begin(), nums.end(), 0, [](int sum, 
 
 ### Analysis
 
-1. **Parallel execution is fastest** - `par_unseq` consistently outperforms all other methods (2-5x faster) by leveraging both multithreading and vectorization.
+1. **Parallel execution is fastest** - `par_unseq` consistently outperforms all other methods, likely due to multithreading and vectorization.
 
 2. **Sequential reduce has policy overhead** - Without optimization, `std::execution::seq` is slower than `accumulate` due to execution policy mechanism overhead, but with optimization they perform similarly.
 
