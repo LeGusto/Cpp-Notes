@@ -1,4 +1,4 @@
-# C++ notes
+# C++ Notes
 
 A collection of performance benchmarks and general notes about C++.
 
