@@ -2,7 +2,6 @@
 #include <chrono>
 
 int main() {
-    // Test 1: WITH volatile
     {
         volatile int a[1] = {0};
         int b;
@@ -16,7 +15,6 @@ int main() {
         std::cout << "b = " << b << "\n";  // Use b so it's not optimized
     }
     
-    // Test 2: WITHOUT volatile
     {
         int a[1] = {0};  // No volatile!
         int b;

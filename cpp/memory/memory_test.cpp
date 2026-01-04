@@ -47,16 +47,7 @@ int main() {
 
     std::cout<<sizeof(obj)<<" "<<sizeof(der)<<"\n";
     
-    // // Get vtable address
-    // void** vtable = (void**)*(void**)&obj;
-    
-    // // Virtual functions are in the vtable in declaration order
-    // void* func1_addr = vtable[0];  // First virtual function
-    // void* func2_addr = vtable[1];  // Second virtual function
-    
-    // std::cout << "func1 (virtual) address: " << func1_addr << std::dec << "\n";
-    // std::cout << "func2 (virtual) address: " << func2_addr << std::dec << "\n";
-    
+
     // return 0;
     obj.func1(); der.func1();
 

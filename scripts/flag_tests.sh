@@ -30,6 +30,11 @@ for FLAG in "${FLAGS[@]}"; do
     fi
 
     echo -e "===================FLAG = ${FLAG:-None}========================="
+    
+    echo "Warmup run..."
+    "$OUTPUT_PATH" > /dev/null 2>&1
+    
+    echo "Benchmark run:"
     "$OUTPUT_PATH"
 done
 

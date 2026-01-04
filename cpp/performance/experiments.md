@@ -16,6 +16,8 @@
 
 ## Integer Type Performance Comparison (CPU-Bound)
 
+**Files:** `type_test.cpp`
+
 **Hypothesis:**
     Since my architecture is 64 bit, 64 bit types should perform the best and `int_fast*` types should map to 64 bits
 
@@ -59,6 +61,8 @@ result = (result & 0xFF) | (result << 8);
 For CPU-intensive arithmetic operations on a 64-bit system, 64-bit types (`long`, `long long`, `int64_t`, or `int_fast64_t`) provide the best performance. The `int_fast*` types are a good general choice, since they automatically deduce the best size for CPU operations.
 
 ## Performance Comparison: accumulate() vs reduce()
+
+**Files:** `red_vs_acc.cpp`
 
 **Hypothesis:**
     Parallel execution should provide the best performance, **reduce()** should always perform than **accumulate()**
