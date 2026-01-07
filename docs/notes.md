@@ -39,6 +39,13 @@
 - Members aligned to largest member's alignment requirement
 - `#pragma pack(1)` removes padding, but may be slower due to needing multiple cache line segments for one variable
 
+## False Sharing
+- Occurs when multiple threads **write** to different variables on the same cache line (typically 64 bytes)
+- Cache coherency protocol invalidates entire cache lines, causing cache line bouncing between CPU cores
+- **Reading** from the same cache line is fine (cache line can be in "Shared" state)
+- **Writing** to different variables on same cache line causes performance degradation
+- Fix: Use `alignas(64)` to separate variables onto different cache lines
+
 ## Random
 - **rand()** - Old C function, low period, modulo bias issues
 - **std::random_device** - Hardware-based, secure but slow
