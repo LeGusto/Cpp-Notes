@@ -1,6 +1,6 @@
 # C++ Notes
 
-A collection of performance benchmarks and general notes about C++.
+A collection of performance benchmarks and general notes about C++, data structures and algorithms.
 
 ## Structure
 
